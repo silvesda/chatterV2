@@ -6,4 +6,12 @@ services:
     restart: always
     ports:
       - 6379:6379
+chat:
+  image:
+  restart: always
+  ports:
+    -9900:3000
+  environment:
+    -REDIS_HOST=redis
+    -REDIS_PORT=6379
 
